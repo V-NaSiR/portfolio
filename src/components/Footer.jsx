@@ -1,4 +1,4 @@
-import spinner from "../assets/img/Shop vintage posters.jpg";
+import spinner from "../assets/images/Shop vintage posters.jpg";
 
 const Footer = () => {
   return (

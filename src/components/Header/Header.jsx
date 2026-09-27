@@ -4,9 +4,9 @@ import styles from "./AnimationBox.module.css";
 import { scroller } from "react-scroll";
 import TypewriterLoop from "../Effects/TypewriterLoop";
 
-import robotImage from "../../assets/img/chalk-robot.png";
-import robotHandImage from "../../assets/img/chalk-robot-hand.png";
-import arrowImage from "../../assets/img/Arrow.png";
+import robotImage from "../../assets/images/chalk-robot.png";
+import robotHandImage from "../../assets/images/chalk-robot-hand.png";
+import arrowImage from "../../assets/images/Arrow.png";
 
 const navItems = [
   {

@@ -2,7 +2,7 @@ import styles from "./Project.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Chips from "./UI/Chips";
 
-import noImage from "../assets/img/no-image.jpg";
+import noImage from "../assets/images/no-image.jpg";
 
 const Project = ({
   label,

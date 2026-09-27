@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "./AnalogClock.module.css";
 
-import clockImage from "../assets/img/clock-brown.png";
-import hourHandImage from "../assets/img/Hours Hand.png";
-import minuteHandImage from "../assets/img/Min Hand.png";
-import secondHandImage from "../assets/img/red clock hand.png";
-import clockDotImage from "../assets/img/clock-middle.png";
+import clockImage from "../assets/images/clock-brown.png";
+import hourHandImage from "../assets/images/Hours Hand.png";
+import minuteHandImage from "../assets/images/Min Hand.png";
+import secondHandImage from "../assets/images/red clock hand.png";
+import clockDotImage from "../assets/images/clock-middle.png";
 
 const AnalogClock = () => {
   const [time, setTime] = useState(new Date());

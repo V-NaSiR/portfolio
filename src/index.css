@@ -1,15 +1,3 @@
-/* Import Fonts */
-@import url('assets/fonts/Mj_Kids-Particles/stylesheet.css');
-@import url('assets/fonts/vazirmatn/Vazirmatn-FD-font-face.css');
-@import url('assets/fonts/Caveat-English/stylesheet.css');
-@import url('assets/fonts/chalkboard/stylesheet.css');
-@import url('assets/fonts/Fredericka_the_Great/stylesheet.css');
-@import url('assets/fonts/IRANSansDN-All/stylesheet.css');
-@import url('assets/fonts/Kalam/stylesheet.css');
-@import url('assets/fonts/Caveat_Brush/stylesheet.css');
-@import url('assets/fonts/Patrick_Hand/stylesheet.css');
-@import url('assets/fonts/Shadows_Into_Light/stylesheet.css');
-
 /* Eric Meyer’s CSS Reset */
 html,
 body,
@@ -149,10 +137,6 @@ table {
 }
 
 /* end Eric Meyer’s CSS Reset */
-@font-face {
-	font-family: 'ghalam';
-	src: url("./assets/fonts/Mj_Ghalam-2_0.TTF");
-}
 
 @font-face {
 	font-family: "Font Awesome 6 Free";

@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import Skill from "./Skill";
 
 import { skillSections } from "../utils/skills-data";
+import FadeInSection from "./Effects/FadeInSection";
 
 const Skills = () => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,13 @@ const Skills = () => {
         <div className="container">
           <h2 className="section-title mb-3">مهارت های من</h2>
 
-          {skillSections.map((section) => (
+          {skillSections.map((section, sectionIndex) => (
             <section key={section.id}>
-              <h3 className="section-title text-start mb-3">{section.title}</h3>
+              <FadeInSection direction="bottom" delay={sectionIndex * 0.6}>
+                <h3 className="section-title text-start mb-3">
+                  {section.title}
+                </h3>
+              </FadeInSection>
 
               <div className="row">
                 {section.skills.map((skill) => {

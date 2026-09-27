@@ -3,7 +3,7 @@ import styles from "./AnimationBox.module.css";
 import AnalogClock from "../AnalogClock";
 import { Element } from "react-scroll";
 
-import dustImage from "../../assets/img/Dust.png";
+import dustImage from "../../assets/images/Dust.png";
 
 const AnimationBox = () => {
   return (
