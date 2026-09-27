@@ -1,0 +1,112 @@
+.descriptionList {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: .75rem;
+    background-color: rgb(249, 222, 196);
+    padding: .75rem;
+    border: 5px double brown;
+    overflow: hidden;
+    font-size: .8rem;
+}
+
+.descriptionList:first-child {
+    border-left: unset;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.descriptionList:last-child {
+    border-right: unset;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.descriptionList .title,
+.descriptionList .description {
+    padding: 10px;
+    line-height: 1.5em;
+    border-radius: 6px;
+    background-color: rgb(255, 239, 224);
+    display: flex;
+    align-items: center;
+}
+
+.descriptionList .title {
+    border-left: unset;
+}
+
+.descriptionList .description {
+    border-right: unset;
+}
+
+/* note of skills */
+.notesOfSkills {
+    min-height: 470px;
+    background-image: url("../assets/img/note-new-2.png");
+    background-size: contain;
+    background-repeat: round;
+    border-radius: 1rem;
+    padding: 25px 0;
+    line-height: 1.6;
+    overflow: hidden;
+    font-family: "IRANSansDN", "Kalam", sans-serif;
+}
+
+.rateOfSkills {
+    display: grid;
+    grid-template-columns: repeat(2, max-content max-content);
+    margin-top: 29px;
+    column-gap: 5%;
+    font-family: 'Caveat';
+}
+
+.rateOfSkills .title,
+.rateOfSkills .description {
+    font-size: .88rem;
+    line-height: 3em;
+}
+
+@media (max-width:992px) {
+
+    .descriptionList {
+        grid-template-columns: 25% auto;
+        font-size: .75rem;
+    }
+
+    .descriptionList:first-child {
+        border-left: 5px double brown;
+        border-bottom: unset;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: unset;
+        padding-bottom: 15px;
+    }
+
+    .descriptionList:last-child {
+        border-right: 5px double brown;
+        border-top: unset;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border-top-left-radius: unset;
+        padding-top: unset;
+    }
+
+    .rateOfSkills {
+        grid-template-columns: max-content max-content;
+    }
+
+    .notesOfSkills {
+        background-size: cover;
+        min-height: 420px;
+    }
+
+    .notesOfSkills h4 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:320px) {
+    .descriptionList {
+        font-size: .7rem;
+    }
+}

@@ -1,0 +1,411 @@
+        .animationBox {
+            width: 100%;
+            min-height: 750px;
+            position: relative;
+            overflow-x: clip;
+        }
+
+        .ball {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            background-image: url("../../assets/img/brown-ball.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100px;
+            left: -10%;
+            z-index: 0;
+            transform: translateX(-50%);
+            animation: ballRoll .6s 1 forwards .5s linear, ballOut 5s 1 forwards 1.1s ease-in;
+        }
+
+        .board {
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            background-image: url("../../assets/img/black-board.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 8px solid var(--board-border);
+            align-self: center;
+            animation: board 1.2s 1 forwards 1.16s ease-in, boardFall .45s 1 forwards 2.4s ease-in;
+            transform: translateX(-50%) translateY(0) scale(.9);
+            z-index: 3;
+            border-radius: 2px;
+        }
+
+        .boardBase {
+            display: inline-block;
+            width: 40px;
+            height: 240px;
+            background-color: var(--board-border);
+            align-self: center;
+            position: absolute;
+            bottom: 100px;
+            transform: translateX(-50%);
+            transform-origin: bottom center;
+            z-index: 1;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        .leftBoardBase {
+            animation: leftBoardBase 2.5s 1 forwards .98s ease-in;
+            left: 30%;
+            transform-origin: bottom center;
+        }
+
+        .rightBoardBase {
+            animation: rightBoardBase 2.8s 1 forwards 1.15s ease-in;
+            bottom: 100px;
+            right: 30%;
+        }
+
+        .dust {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 96%;
+            height: 330px;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: dust 4s 1 forwards 2.61s ease-in;
+            z-index: 2;
+        }
+
+        .robotImgBox {
+            position: absolute;
+            width: 200px;
+            height: 216px;
+            left: 10px;
+            bottom: 20px;
+            pointer-events: none;
+            user-select: none;
+            -webkit-filter: blur(.1px) brightness(0.99) grayscale(.9);
+            filter: blur(.1px) brightness(0.99) grayscale(.9);
+        }
+
+        .robotImg {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .robotImgHand {
+            position: absolute;
+            width: 40px;
+            right: -2.5px;
+            top: 60px;
+            animation: sayHi 1.5s infinite backwards 3.5s;
+            rotate: -5deg;
+            transform-origin: center left;
+            pointer-events: none;
+        }
+
+        .date {
+            font-size: 1rem !important;
+        }
+
+        .scrollDown {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 80px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            filter: blur(4px);
+            transition: opacity .5s ease-in, filter .4s ease-in;
+        }
+
+        .scrollDown img {
+            width: 70%;
+            opacity: 0.85;
+        }
+
+        .showScrollDown {
+            opacity: 1;
+            filter: blur(0px);
+            animation: moveVertical 3s infinite .5s backwards;
+        }
+
+        .name {
+            opacity: 0;
+            transform: translateY(10px);
+            filter: blur(4px);
+        }
+
+        .showName {
+            animation: chalkReveal 0.8s ease-out forwards;
+        }
+
+        .role {
+            display: flex;
+            justify-content: center;
+            direction: ltr;
+        }
+
+        .role span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(6px) rotate(2deg);
+            font-size: inherit;
+        }
+
+        .showRole span {
+            animation: letterReveal 0.35s ease-out forwards;
+        }
+
+        @keyframes letterReveal {
+            from {
+                opacity: 0;
+                transform: translateY(6px) rotate(2deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        @keyframes chalkReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+                filter: blur(4px);
+            }
+
+            60% {
+                opacity: 0.7;
+                filter: blur(1px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes ballRoll {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                left: 23%;
+                transform: rotate(660deg);
+            }
+        }
+
+        @keyframes ballOut {
+            0% {}
+
+            100% {
+                left: -15%;
+                transform: rotate(0deg);
+                display: none;
+            }
+        }
+
+        @keyframes leftBoardBase {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(90deg);
+                display: none;
+            }
+        }
+
+        @keyframes rightBoardBase {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(-90deg);
+                display: none;
+            }
+        }
+
+        @keyframes board {
+            0% {
+                transform: translateX(-50%) translateY(0) scale(.9);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(0) scale(.9) rotate(-10deg);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(200px) scale(1) rotate(-10deg);
+                box-shadow: -20px 30px 30px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        @keyframes boardFall {
+            0% {}
+
+            100% {
+                transform: translateX(-50%) translateY(220px) scale(1) perspective(200px) rotateX(0.5deg);
+                box-shadow: 0 14px 25px 4px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        @keyframes dust {
+            0% {
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 0.5;
+            }
+
+            55% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(-150px);
+                opacity: 0;
+                display: none;
+            }
+        }
+
+        @keyframes moveVertical {
+            0% {
+                transform: translateX(-50%) translateY(5px);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(5px);
+            }
+        }
+
+        @keyframes sayHi {
+            0% {
+                transform: rotate(-8deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+
+            100% {
+                transform: rotate(-8deg);
+            }
+        }
+
+        @media (min-width:1500px) {
+            @keyframes ballRoll {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    left: 24.5%;
+                    transform: rotate(660deg);
+                }
+            }
+        }
+
+        @media (max-width:700px) {
+            .animationBox {
+                min-height: 500px;
+            }
+
+            .dust {
+                width: 100%;
+            }
+
+            .rightBoardBase {
+                display: none;
+            }
+
+            .leftBoardBase {
+                left: 50%;
+                height: 170px;
+                bottom: 65px;
+                width: 35px;
+            }
+
+            .ball {
+                bottom: 65px;
+                width: 70px;
+                height: 70px;
+            }
+
+            .robotImgBox {
+                display: none;
+            }
+
+            .scrollDown img {
+                width: 45%;
+            }
+
+            .date {
+                font-size: .9rem !important;
+            }
+
+            /* animation in mobile */
+            @keyframes board {
+                0% {
+                    transform: translateX(-50%) translateY(0) scale(.9);
+                }
+
+                40% {
+                    transform: translateX(-50%) translateY(0) scale(.9) rotate(-10deg);
+                }
+
+                100% {
+                    transform: translateX(-50%) translateY(150px) scale(1) rotate(-10deg);
+                    box-shadow: -20px 30px 30px rgba(0, 0, 0, 0.15);
+                }
+            }
+
+            @keyframes boardFall {
+                0% {}
+
+                100% {
+                    transform: translateX(-50%) translateY(170px) scale(1) perspective(250px) rotateX(0.5deg);
+                    box-shadow: 0 14px 25px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            @keyframes ballRoll {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    left: 36%;
+                    transform: rotate(660deg);
+                }
+            }
+
+            @keyframes ballOut {
+                0% {}
+
+                100% {
+                    left: -20%;
+                    transform: rotate(0deg);
+                    display: none;
+                }
+            }
+        }

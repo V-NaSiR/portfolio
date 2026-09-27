@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Chalkboard';
+    src: url('Chalkboard-Regular.eot');
+    src: url('Chalkboard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Chalkboard-Regular.woff2') format('woff2'),
+        url('Chalkboard-Regular.woff') format('woff'),
+        url('Chalkboard-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,75 @@
+.clockBox {
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  margin: .5rem auto;
+  z-index: 0;
+}
+
+.clock {
+  width: 100%
+}
+
+.hand {
+  position: absolute;
+  transform: rotate(0deg);
+  scale: 1.05;
+}
+
+.hour {
+  left: 50%;
+  top: 50%;
+  height: 22%;
+  width: 6px;
+  z-index: 3;
+  translate: -65% -80%;
+  transform-origin: center 80%;
+}
+
+.minute {
+  left: 50%;
+  top: 50%;
+  height: 28%;
+  width: 6px;
+  z-index: 2;
+  translate: -75% -85%;
+  transform-origin: center 85.3%;
+}
+
+.second {
+  left: 50%;
+  top: 50%;
+  height: 32%;
+  width: 5px;
+  z-index: 3;
+  transform-origin: center 74%;
+  translate: -80% -75%;
+}
+
+.centerDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-66%, -54%);
+  z-index: 4;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width:700px) {
+  .clockBox {
+    width: 240px;
+    margin: 15px auto;
+  }
+}

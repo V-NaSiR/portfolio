@@ -1,0 +1,168 @@
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1rem 1rem 1.75rem 1rem;
+    border: 2px solid brown;
+    box-shadow: 0px 6px 10px -6px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    height: 605px;
+}
+
+.cardBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--secondary-bg);
+    box-shadow:
+        inset 0 0px 10px var(--main-bg),
+        inset 0 0px 5px rgba(165, 42, 42, 0.3);
+
+    padding-bottom: 1rem;
+}
+
+.title a {
+    color: var(--section-title);
+    margin-bottom: 10px;
+    transition: all .3s ease;
+    font-size: 1rem;
+}
+
+.title a:hover {
+    color: brown;
+}
+
+.btn {
+    align-self: flex-start;
+
+    background-color: var(--section-title);
+    color: var(--secondary-bg);
+    border: 2px solid var(--section-title);
+
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: .775rem;
+
+    transition: all .2s ease;
+
+    margin-top: .75rem;
+    margin-right: auto;
+}
+
+.btn:hover {
+    background-color: var(--secondary-bg);
+    color: var(--section-title);
+}
+
+.icon {
+    font-size: .7rem;
+    margin-right: 10px;
+}
+
+.imgContainer {
+    display: block;
+    height: 280px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform .3s ease, filter .2s ease-in;
+}
+
+.img:hover {
+    transform: scale(1.08);
+    filter: sepia(.5);
+}
+
+.arrowBtn {
+    all: unset;
+    position: relative;
+    z-index: 0;
+}
+
+.arrowBtn[disabled] {
+    opacity: .8;
+}
+
+.arrowIcon {
+    font-size: .95rem;
+    color: var(--main-bg);
+    background-color: var(--section-title);
+    border: 3px solid var(--section-title);
+    transition: all .3s ease;
+    padding: 9.5px;
+    border-radius: 50%;
+}
+
+.arrowBtn:hover .arrowIcon {
+    color: var(--section-title);
+    background-color: var(--secondary-bg)
+}
+
+.navPills button {
+    background-color: unset;
+    border: none;
+    color: var(--section-title);
+    line-height: 30px;
+    padding: 4px 14px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid var(--section-title);
+    font-size: .85rem;
+    transition: transform .3s ease;
+}
+
+.navPills .active {
+    color: var(--secondary-bg);
+    background-color: var(--section-title);
+}
+
+.navPills button:not(.active):hover {
+    animation: shake .8s 1 ease backwards;
+}
+
+@media (max-width:500px) {
+    .navPills {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .navPills li button {
+        border-radius: 0;
+    }
+
+    .navPills li:first-child button {
+        border-top: 2px solid var(--section-title);
+    }
+
+    .navPills li {
+        display: contents;
+    }
+
+    .navPills .active {
+        border-radius: 0;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}

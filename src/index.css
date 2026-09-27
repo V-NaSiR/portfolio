@@ -1,0 +1,272 @@
+/* Import Fonts */
+@import url('assets/fonts/Mj_Kids-Particles/stylesheet.css');
+@import url('assets/fonts/vazirmatn/Vazirmatn-FD-font-face.css');
+@import url('assets/fonts/Caveat-English/stylesheet.css');
+@import url('assets/fonts/chalkboard/stylesheet.css');
+@import url('assets/fonts/Fredericka_the_Great/stylesheet.css');
+@import url('assets/fonts/IRANSansDN-All/stylesheet.css');
+@import url('assets/fonts/Kalam/stylesheet.css');
+@import url('assets/fonts/Caveat_Brush/stylesheet.css');
+@import url('assets/fonts/Patrick_Hand/stylesheet.css');
+@import url('assets/fonts/Shadows_Into_Light/stylesheet.css');
+
+/* Eric Meyer’s CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	font-family: 'Vazirmatn FD', sans-serif;
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end Eric Meyer’s CSS Reset */
+@font-face {
+	font-family: 'ghalam';
+	src: url("./assets/fonts/Mj_Ghalam-2_0.TTF");
+}
+
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	src: url("./assets/fonts/fa-solid-900.woff2") format("woff2");
+	font-weight: 900;
+}
+
+:root {
+	--main-bg: rgb(249, 222, 196);
+	--secondary-bg: rgb(255, 239, 224);
+	--tertiary-bg: rgb(45 25 25);
+	--content-bg: rgb(252, 235, 217);
+
+	--board-border: rgb(74, 24, 24);
+	--board-color: rgba(255, 245, 231, 0.84);
+	--board-second-color: #e7ebea;
+	--section-title: rgb(100, 39, 39);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(255, 237, 220);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--section-title);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--board-border);
+}
+
+html {
+	font-size: 19px;
+	scroll-behavior: smooth;
+}
+
+@media (min-width: 1500px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1200px) {
+	html {
+		font-size: 18.5px;
+	}
+}
+
+@media (max-width: 700px) {
+	html {
+		font-size: 17.5px;
+	}
+}
+
+h1 {
+	font-size: 1.7rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1.05rem;
+}
+
+p,
+li,
+strong,
+span {
+	font-size: .85rem;
+	line-height: 1.5;
+}
+
+.App {
+	background-color: var(--main-bg);
+	overflow-x: hidden;
+}
+
+h2.section-title {
+	text-align: center;
+	color: var(--section-title);
+	font-weight: 600;
+}
+
+h3.section-title,
+h4.section-title {
+	text-align: center;
+	color: var(--section-title);
+	font-weight: 600;
+}
+
+.secondary-bg {
+	background-color: var(--secondary-bg);
+}
+
+.tertiary-bg {
+	background-color: var(--tertiary-bg);
+}

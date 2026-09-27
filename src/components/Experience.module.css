@@ -1,0 +1,27 @@
+.experienceList {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.experienceList li::marker {
+    color: var(--section-title);
+}
+
+/* note of skills */
+.notesOfSkills {
+    min-height: 470px;
+    background-image: url("../assets/img/note-paper-wide.png");
+    background-size: contain;
+    background-repeat: round;
+    border-radius: 1rem;
+    padding: 25px 0;
+    line-height: 1.6;
+    overflow: hidden;
+    font-family: "IRANSansDN", "Kalam", sans-serif;
+}
+
+@media (max-width:767px) {
+    .notesOfSkills {
+        background-image: url("../assets/img/note-paper-narrow.png");
+    }
+}

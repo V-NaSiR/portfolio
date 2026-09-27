@@ -1,0 +1,62 @@
+.navbar {
+    width: max-content;
+    /* text-align: center; */
+}
+
+.menuTitle {
+    font-size: 1.2rem !important;
+}
+
+.navItem {
+    display: flex;
+    align-items: flex-start;
+}
+
+.navLink {
+    cursor: pointer;
+    transition: all .3s ease;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 35px;
+    font-size: .9rem;
+    color: var(--board-second-color);
+}
+
+.chalkLine {
+    position: absolute;
+    width: 100%;
+    bottom: -9px;
+    left: 0;
+    transform: translateY(100%);
+    transition: all .5s ease;
+}
+
+.chalkLine img {
+    width: 100%;
+    height: 10px;
+}
+
+.navLink:hover .chalkLine {
+    transform: translateY(0);
+    animation: vibration .8s infinite 1s step-end forwards;
+}
+
+.marker {
+    width: 19px;
+    margin-left: 10px;
+}
+
+@keyframes vibration {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(-4deg);
+    }
+}

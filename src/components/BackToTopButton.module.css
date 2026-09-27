@@ -1,0 +1,54 @@
+.backToTopButton {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    padding: 10px 12.5px;
+    font-size: 15px;
+    border-radius: 8px;
+    background-color: var(--section-title);
+    color: var(--secondary-bg);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .4s ease;
+    border: 2.5px solid var(--section-title);
+}
+
+.backToTopButton:hover {
+    background-color: var(--secondary-bg);
+    color: var(--section-title);
+    translate: 0 -7px;
+    scale: 1.07;
+}
+
+@keyframes btnComeIn {
+    0% {
+        display: block;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes btnOut {
+    0% {}
+
+    25% {
+        transform: translateX(-25px) rotate(-90deg);
+    }
+
+    50% {
+        transform: translateX(-50px) rotate(-180deg);
+    }
+
+    75% {
+        transform: translateX(-75px) rotate(-270deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(-360deg);
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Shadows Into';
+    src: url('ShadowsIntoLight.eot');
+    src: url('ShadowsIntoLight.eot?#iefix') format('embedded-opentype'),
+        url('ShadowsIntoLight.woff2') format('woff2'),
+        url('ShadowsIntoLight.woff') format('woff'),
+        url('ShadowsIntoLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
