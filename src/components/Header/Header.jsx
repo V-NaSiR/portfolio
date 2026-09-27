@@ -5,8 +5,8 @@ import { scroller } from "react-scroll";
 import TypewriterLoop from "../Effects/TypewriterLoop";
 
 import robotImage from "../../assets/images/chalk-robot.png";
-import robotHandImage from "../../assets/images/chalk-robot-hand.png";
-import arrowImage from "../../assets/images/Arrow.png";
+import robotHandImage from "../../assets/images/chalk-robot-hand.webp";
+import arrowImage from "../../assets/images/Arrow.webp";
 
 const navItems = [
   {
@@ -14,15 +14,15 @@ const navItems = [
     value: "درباره من",
   },
   {
-    id: "skill",
+    id: "skills",
     value: "مهارت های من",
   },
   {
-    id: "project",
+    id: "projects",
     value: "نمونه کار های من",
   },
   {
-    id: "experience",
+    id: "experiences",
     value: "تجربه های کاری من",
   },
   {
@@ -50,23 +50,25 @@ const getPersianDate = () => {
 
 const title = "Full Stack Developer";
 
-const Header = () => {
+const Header = ({ ballAnimateEnd }) => {
   const [boardAnimateEnd, setBoardAnimateEnd] = useState(false);
   const [roleAnimateEnd, setRoleAnimateEnd] = useState(false);
 
   return (
     <header
-      className={`${styles.board} header`}
+      className={`${styles.board} ${ballAnimateEnd ? styles.animateBoard : ""} header`}
       onAnimationEnd={(e) => {
         if (e.animationName.includes("boardFall")) {
           setBoardAnimateEnd(true);
         }
       }}
     >
-      <div className="d-flex justify-content-between">
-        <span>یاد می‌گیرم، می‌سازم، بهتر می‌شوم</span>
+      <div className="d-flex justify-content-between align-items-start">
+        <span className={styles.headingText}>
+          یاد می‌گیرم، می‌سازم، بهتر می‌شوم
+        </span>
         <sup>به نام خداوند جان و خرد</sup>
-        <span className={styles.date}>{getPersianDate()}</span>
+        <span className={styles.headingText}>{getPersianDate()}</span>
       </div>
 
       <div className="mt-4">
@@ -97,7 +99,9 @@ const Header = () => {
         </h2>
       </div>
 
-      <div className={styles.robotImgBox}>
+      <div
+        className={`${styles.robotImgBox} ${boardAnimateEnd ? styles.showRobot : ""}`}
+      >
         <img className={styles.robotImg} src={robotImage} alt="robot" />
         <img className={styles.robotImgHand} src={robotHandImage} alt="robot" />
       </div>
@@ -114,7 +118,7 @@ const Header = () => {
       )}
 
       <button
-        className={`${styles.scrollDown} ${boardAnimateEnd ? styles.showScrollDown : ""}`}
+        className={`${styles.scrollDown} ${boardAnimateEnd ? styles.animateScrollDown : ""}`}
         onClick={() => scrollTo("about")}
       >
         <img src={arrowImage} alt="scroll down" />

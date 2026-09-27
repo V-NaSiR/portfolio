@@ -135,8 +135,8 @@ export const skillSections = [
   },
 
   {
-    id: "database",
-    title: "دیتابیس",
+    id: "databaseAndTools",
+    title: "دیتابیس و ابزار ها",
     skills: [
       {
         id: 1,
@@ -148,15 +148,8 @@ export const skillSections = [
         className: "sql-server",
         stars: 3.75,
       },
-    ],
-  },
-
-  {
-    id: "tools",
-    title: "ابزارها",
-    skills: [
       {
-        id: 1,
+        id: 2,
         title: "git",
         icon: "square-git",
         color: "#f15739",
@@ -165,7 +158,7 @@ export const skillSections = [
         stars: 3.5,
       },
       {
-        id: 2,
+        id: 3,
         title: "github",
         icon: GithubIcon,
         color: "#1B1F23",
@@ -176,6 +169,32 @@ export const skillSections = [
       },
     ],
   },
+
+  // {
+  //   id: "tools",
+  //   title: "ابزارها",
+  //   skills: [
+  //     {
+  //       id: 1,
+  //       title: "git",
+  //       icon: "square-git",
+  //       color: "#f15739",
+  //       type: "font",
+  //       percentage: 70,
+  //       stars: 3.5,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "github",
+  //       icon: GithubIcon,
+  //       color: "#1B1F23",
+  //       type: "component",
+  //       percentage: 70,
+  //       stars: 3.5,
+  //       className: "github",
+  //     },
+  //   ],
+  // },
 ];
 
 // export const skills = [

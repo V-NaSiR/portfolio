@@ -234,15 +234,7 @@ span {
 	overflow-x: hidden;
 }
 
-h2.section-title {
-	text-align: center;
-	color: var(--section-title);
-	font-weight: 600;
-}
-
-h3.section-title,
-h4.section-title {
-	text-align: center;
+.section-title {
 	color: var(--section-title);
 	font-weight: 600;
 }

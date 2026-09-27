@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./index.css";
 import "./assets/fonts/vazirmatn/Vazirmatn-FD-font-face.css";
+import "./assets/fonts/IRANSansDN-All/stylesheet.css";
 import "./assets/fonts/Mj_Kids-Particles/stylesheet.css";
 import "./assets/fonts/Caveat_Brush/stylesheet.css";
 import "./assets/fonts/Kalam/stylesheet.css";

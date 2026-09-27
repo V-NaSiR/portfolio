@@ -1,8 +1,8 @@
 import { scroller } from "react-scroll";
 import styles from "./Navbar.module.css";
 
-import starImage from "../../assets/images/Star.png";
-import chalkLineImage from "../../assets/images/chalk-line.png";
+import starImage from "../../assets/images/Star.webp";
+import chalkLineImage from "../../assets/images/chalk-line.webp";
 
 const Navbar = ({ navItems }) => {
   const scrollTo = (elementName) => {

@@ -7,7 +7,7 @@ export const projectList = [
         id: 1,
         url: "https://farda-school.ir",
         label: "مدرسه فردا",
-        img: "/images/farda-school.png",
+        img: `${import.meta.env.BASE_URL}images/farda-school.webp`,
         type: "company",
         role: "Full Stack Developer",
         description:
@@ -24,7 +24,7 @@ export const projectList = [
         id: 2,
         url: "http://demo.foroughdanaei.ir",
         label: "مدرسه فروغ دانایی",
-        img: "/images/forough-danaei.png",
+        img: `${import.meta.env.BASE_URL}images/forough-danaei.png`,
         type: "company",
         role: "Full Stack Developer",
         description:
@@ -41,7 +41,7 @@ export const projectList = [
         id: 3,
         url: "https://toosloader.ir",
         label: "طوس لودر",
-        img: "/images/toos-loader.png",
+        img: `${import.meta.env.BASE_URL}images/toos-loader.webp`,
         type: "company",
         role: "Full Stack Developer",
         description:
@@ -58,7 +58,7 @@ export const projectList = [
         id: 4,
         url: "http://centerage.iliasystem.co",
         label: "Centerage",
-        img: "/images/centerage.png",
+        img: `${import.meta.env.BASE_URL}images/centerage.webp`,
         type: "company",
         role: "Full Stack Developer",
         description:
@@ -78,30 +78,30 @@ export const projectList = [
           "استفاده از جداول Resource برای عناوین و متون ثابت",
         ],
       },
-      {
-        id: 5,
-        url: "#",
-        label: "Todo List",
-        img: "",
-        type: "personal",
-        role: "Full Stack Developer",
-        description:
-          "اپلیکیشن مدیریت وظایف با امکان ایجاد، ویرایش، حذف و تغییر وضعیت وظایف بدون نیاز به بارگذاری مجدد صفحه.",
-        technologies: [
-          "ASP.NET Core MVC",
-          "EF Core",
-          "SQL Server",
-          "JavaScript",
-          "jQuery",
-        ],
-        highlights: [
-          "ایجاد و ویرایش وظایف",
-          "حذف وظایف",
-          "تغییر وضعیت انجام شده",
-          "ارسال درخواست‌ها با AJAX",
-          "به‌روزرسانی اطلاعات بدون Reload صفحه",
-        ],
-      },
+      // {
+      //   id: 5,
+      //   url: "#",
+      //   label: "Todo List",
+      //   img: "",
+      //   type: "personal",
+      //   role: "Full Stack Developer",
+      //   description:
+      //     "اپلیکیشن مدیریت وظایف با امکان ایجاد، ویرایش، حذف و تغییر وضعیت وظایف بدون نیاز به بارگذاری مجدد صفحه.",
+      //   technologies: [
+      //     "ASP.NET Core MVC",
+      //     "EF Core",
+      //     "SQL Server",
+      //     "JavaScript",
+      //     "jQuery",
+      //   ],
+      //   highlights: [
+      //     "ایجاد و ویرایش وظایف",
+      //     "حذف وظایف",
+      //     "تغییر وضعیت انجام شده",
+      //     "ارسال درخواست‌ها با AJAX",
+      //     "به‌روزرسانی اطلاعات بدون Reload صفحه",
+      //   ],
+      // },
     ],
   },
 ];

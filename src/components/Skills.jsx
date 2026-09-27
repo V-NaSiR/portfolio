@@ -1,9 +1,9 @@
 // import { useState } from "react";
 
 import { Element } from "react-scroll";
-import Skill from "./Skill";
-
 import { skillSections } from "../utils/skills-data";
+
+import Skill from "./Skill";
 import FadeInSection from "./Effects/FadeInSection";
 
 const Skills = () => {
@@ -11,29 +11,31 @@ const Skills = () => {
   let skillIndex = 0;
 
   return (
-    <Element name="skill">
-      <section id="skills">
+    <Element name="skills">
+      <section id="skills" className="py-4">
         <div className="container">
-          <h2 className="section-title mb-3">مهارت های من</h2>
+          <h2 className="section-title text-center mb-4">مهارت های من</h2>
 
           {skillSections.map((section, sectionIndex) => (
-            <section key={section.id}>
+            <section key={section.id} className="row align-items-center mt-4">
               <FadeInSection direction="bottom" delay={sectionIndex * 0.6}>
-                <h3 className="section-title text-start mb-3">
+                <h5 className="section-title text-start mb-3 mb-md-0 col-md-2 col-xl-1">
                   {section.title}
-                </h3>
+                </h5>
               </FadeInSection>
 
-              <div className="row">
+              <div className="row row-gap-4 col-md-10 col-xl-11">
                 {section.skills.map((skill) => {
                   const index = skillIndex++;
 
                   return (
-                    <Skill
-                      key={`${section.id}-${skill.id}`}
-                      {...skill}
-                      index={index}
-                    />
+                    <div className="col-lg-3 col-md-6 col-12">
+                      <Skill
+                        key={`${section.id}-${skill.id}`}
+                        {...skill}
+                        index={index}
+                      />
+                    </div>
                   );
                 })}
               </div>

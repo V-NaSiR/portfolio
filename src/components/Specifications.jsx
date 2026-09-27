@@ -53,7 +53,9 @@ const Specifications = () => {
     <Element name="specifications">
       <section className="specifications secondary-bg">
         <div className="container">
-          <h2 className="section-title mb-4">کمی بیشتر درباره من</h2>
+          <h2 className="section-title text-center mb-4">
+            کمی بیشتر درباره من
+          </h2>
           <div className="row">
             <FadeInSection direction="right">
               <dl

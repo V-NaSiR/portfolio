@@ -5,14 +5,16 @@ import FadeInSection from "./Effects/FadeInSection";
 
 const Experience = () => {
   return (
-    <Element name="experience">
+    <Element name="experiences">
       <FadeInSection direction="farBottom">
-        <section id="experience" className="py-4">
+        <section id="experiences" className="py-4">
           <div className="container">
             <div
               className={`${styles.notesOfSkills} col-xl-8 col-lg-10 col-12 mx-auto ps-3 pe-4 px-sm-5 pt-4 pb-4`}
             >
-              <h2 className="section-title mt-3">تجربه های کاری من</h2>
+              <h2 className="section-title text-center mt-3">
+                تجربه های کاری من
+              </h2>
 
               <div className="p-2 pe-4 pe-sm-5">
                 <hr className="mt-2 mb-3" />

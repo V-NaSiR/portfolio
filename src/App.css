@@ -40,10 +40,6 @@
     font-size: .85rem;
 }
 
-.header span {
-    font-size: .9rem;
-}
-
 .header .typewriterLoop {
     position: absolute;
     left: 50%;
@@ -79,10 +75,6 @@
 }
 
 /* skills */
-#skills {
-    padding: 35px 0;
-    /* box-shadow: 0 4px 8px rgba(165, 42, 42, 0.218); */
-}
 
 .btn-show-more {
     all: unset;

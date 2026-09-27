@@ -10,18 +10,18 @@
 /* note of skills */
 .notesOfSkills {
     min-height: 470px;
-    background-image: url("../assets/images/note-paper-wide.png");
+    background-image: url("../assets/images/note-paper-wide.webp");
     background-size: contain;
     background-repeat: round;
-    border-radius: 1rem;
+    border-radius: .5rem;
     padding: 25px 0;
     line-height: 1.6;
     overflow: hidden;
-    font-family: "IRANSansDN", "Kalam", sans-serif;
+    font-family: "IRANSansDN", sans-serif;
 }
 
 @media (max-width:767px) {
     .notesOfSkills {
-        background-image: url("../assets/images/note-paper-narrow.png");
+        background-image: url("../assets/images/note-paper-narrow.webp");
     }
 }

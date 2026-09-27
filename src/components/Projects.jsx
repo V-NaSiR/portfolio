@@ -43,11 +43,11 @@ const Projects = () => {
   );
 
   return (
-    <Element name="project">
+    <Element name="projects">
       <FadeInSection direction="farBottom">
-        <section id="project" className="py-4">
+        <section id="projects" className="py-4">
           <div className="container">
-            <h2 className="section-title mb-3">نمونه کار های من</h2>
+            <h2 className="section-title text-center mb-3">نمونه کار های من</h2>
             <ul className={`${styles.navPills} d-flex flex-wrap mb-4`}>
               <li>
                 <button

@@ -88,71 +88,69 @@ const Skill = ({
   };
 
   return (
-    <div className="col-lg-3 col-md-6 col-12 mb-4">
-      <FadeInSection direction="left" delay={index * 0.15}>
+    <FadeInSection direction="left" delay={index * 0.15}>
+      <div
+        className={`${styles.iconBox}`}
+        onMouseEnter={() => {
+          handleMouseEnter();
+        }}
+      >
         <div
-          className={`${styles.iconBox}`}
-          onMouseEnter={() => {
-            handleMouseEnter();
-          }}
-        >
-          <div
-            className={`${styles.hoverOverlay}`}
-            style={{ backgroundColor: color }}
-          ></div>
+          className={`${styles.hoverOverlay}`}
+          style={{ backgroundColor: color }}
+        ></div>
 
-          {type === "font" && (
-            <FontAwesomeIcon
-              className={`${styles.icon}`}
-              icon={["fab", icon]}
-              style={{ color }}
-            />
-          )}
+        {type === "font" && (
+          <FontAwesomeIcon
+            className={`${styles.icon}`}
+            icon={["fab", icon]}
+            style={{ color }}
+          />
+        )}
 
-          {type === "component" && IconComponent && (
-            <IconComponent
-              className={`${styles.imageIcon} ${styles[className] ?? ""}`}
-              style={{ fill: color }}
-            />
-          )}
+        {type === "component" && IconComponent && (
+          <IconComponent
+            className={`${styles.imageIcon} ${styles[className] ?? ""}`}
+            style={{ fill: color }}
+          />
+        )}
 
-          {title && <span className={styles.title}>{title}</span>}
+        {title && <span className={styles.title}>{title}</span>}
 
-          {stars && (
-            <div className={styles.stars}>
-              {[...Array(5)].map((_, i) => (
-                <span
-                  key={i}
-                  className={styles.star}
-                  style={{
-                    ...getStarFill(i, stars),
-                    animationDelay: `${0.6 + index / 5 + i * 0.1}s`,
-                  }}
-                />
-              ))}
-            </div>
-          )}
+        {stars && (
+          <div className={styles.stars}>
+            {[...Array(5)].map((_, i) => (
+              <span
+                key={i}
+                className={styles.star}
+                style={{
+                  ...getStarFill(i, stars),
+                  animationDelay: `${0.6 + index / 5 + i * 0.1}s`,
+                }}
+              />
+            ))}
+          </div>
+        )}
 
-          {percentage && (
-            <div className={`${styles.hoverBox}`}>
-              <span className={`${styles.percentNumber}`}>{progress}%</span>
+        {percentage && (
+          <div className={`${styles.hoverBox}`}>
+            <span className={`${styles.percentNumber}`}>{progress}%</span>
+            <div
+              className={`${styles.progressBar}`}
+              style={{ backgroundColor: color }}
+            >
               <div
-                className={`${styles.progressBar}`}
-                style={{ backgroundColor: color }}
-              >
-                <div
-                  className={`${styles.percentageBar}`}
-                  style={{
-                    width: `${progress}%`,
-                    backgroundImage: `repeating-linear-gradient(45deg, ${color} 0, ${color} 3px, #ffefe0 2px, #ffefe0 6px)`,
-                  }}
-                ></div>
-              </div>
+                className={`${styles.percentageBar}`}
+                style={{
+                  width: `${progress}%`,
+                  backgroundImage: `repeating-linear-gradient(45deg, ${color} 0, ${color} 3px, #ffefe0 2px, #ffefe0 6px)`,
+                }}
+              ></div>
             </div>
-          )}
-        </div>
-      </FadeInSection>
-    </div>
+          </div>
+        )}
+      </div>
+    </FadeInSection>
   );
 };
 
