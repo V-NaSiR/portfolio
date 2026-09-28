@@ -37,7 +37,7 @@ const Project = ({
         </h5>
 
         <div className="d-flex justify-content-between align-items-start gap-1">
-          <div>
+          <div className={styles.role}>
             <strong>نقش: </strong>
             <span>{role}</span>
           </div>

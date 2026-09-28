@@ -15,7 +15,7 @@ const Skill = ({
 }) => {
   const [progress, setProgress] = useState(0);
 
-  const handleMouseEnter = () => {
+  const animateProgress = () => {
     // if (progress === 0) {
     let current = 0;
 
@@ -91,8 +91,8 @@ const Skill = ({
     <FadeInSection direction="left" delay={index * 0.15}>
       <div
         className={`${styles.iconBox}`}
-        onMouseEnter={() => {
-          handleMouseEnter();
+        onPointerEnter={() => {
+          animateProgress();
         }}
       >
         <div

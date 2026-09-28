@@ -1,5 +1,4 @@
 .card {
-    height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -27,11 +26,16 @@
     color: var(--section-title);
     margin-bottom: 10px;
     transition: all .3s ease;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .title a:hover {
     color: brown;
+}
+
+.role {
+    font-size: .85rem;
+    line-height: 1.5;
 }
 
 .btn {
@@ -146,6 +150,10 @@
 
     .navPills .active {
         border-radius: 0;
+    }
+
+    .card {
+        height: 575px;
     }
 }
 

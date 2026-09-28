@@ -218,13 +218,11 @@ h5 {
 }
 
 h6 {
-	font-size: 1.05rem;
+	font-size: 1rem;
 }
 
 p,
-li,
-strong,
-span {
+li {
 	font-size: .85rem;
 	line-height: 1.5;
 }

@@ -22,7 +22,7 @@ export const projectList = [
       },
       {
         id: 2,
-        url: "http://demo.foroughdanaei.ir",
+        url: "https://foroughdanaei.ir",
         label: "مدرسه فروغ دانایی",
         img: `${import.meta.env.BASE_URL}images/forough-danaei.png`,
         type: "company",
@@ -57,7 +57,7 @@ export const projectList = [
       {
         id: 4,
         url: "http://centerage.iliasystem.co",
-        label: "Centerage",
+        label: "سنتراژ",
         img: `${import.meta.env.BASE_URL}images/centerage.webp`,
         type: "company",
         role: "Full Stack Developer",

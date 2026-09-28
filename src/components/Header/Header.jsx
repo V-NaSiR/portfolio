@@ -8,29 +8,6 @@ import robotImage from "../../assets/images/chalk-robot.png";
 import robotHandImage from "../../assets/images/chalk-robot-hand.webp";
 import arrowImage from "../../assets/images/Arrow.webp";
 
-const navItems = [
-  {
-    id: "about",
-    value: "درباره من",
-  },
-  {
-    id: "skills",
-    value: "مهارت های من",
-  },
-  {
-    id: "projects",
-    value: "نمونه کار های من",
-  },
-  {
-    id: "experiences",
-    value: "تجربه های کاری من",
-  },
-  {
-    id: "specifications",
-    value: "کمی بیشتر درباره من",
-  },
-];
-
 const scrollTo = (elementName) => {
   scroller.scrollTo(elementName, {
     duration: 700,
@@ -71,6 +48,12 @@ const Header = ({ ballAnimateEnd }) => {
         <span className={styles.headingText}>{getPersianDate()}</span>
       </div>
 
+      <span
+        className={`${styles.welcomeText} ${ballAnimateEnd ? styles.animateWelcomeText : ""}`}
+      >
+        خوش آمدید!
+      </span>
+
       <div className="mt-4">
         <h1
           className={`text-center mb-2 ${styles.name} ${boardAnimateEnd ? styles.showName : ""}`}
@@ -106,7 +89,7 @@ const Header = ({ ballAnimateEnd }) => {
         <img className={styles.robotImgHand} src={robotHandImage} alt="robot" />
       </div>
 
-      <Navbar navItems={navItems} />
+      <Navbar roleAnimateEnd={roleAnimateEnd} />
 
       {roleAnimateEnd && (
         <TypewriterLoop
@@ -118,7 +101,7 @@ const Header = ({ ballAnimateEnd }) => {
       )}
 
       <button
-        className={`${styles.scrollDown} ${boardAnimateEnd ? styles.animateScrollDown : ""}`}
+        className={`${styles.scrollDown} ${roleAnimateEnd ? styles.animateScrollDown : ""}`}
         onClick={() => scrollTo("about")}
       >
         <img src={arrowImage} alt="scroll down" />

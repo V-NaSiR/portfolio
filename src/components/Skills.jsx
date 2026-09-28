@@ -6,6 +6,8 @@ import { skillSections } from "../utils/skills-data";
 import Skill from "./Skill";
 import FadeInSection from "./Effects/FadeInSection";
 
+import styles from "./Skill.module.css";
+
 const Skills = () => {
   // const [isOpen, setIsOpen] = useState(false);
   let skillIndex = 0;
@@ -17,14 +19,19 @@ const Skills = () => {
           <h2 className="section-title text-center mb-4">مهارت های من</h2>
 
           {skillSections.map((section, sectionIndex) => (
-            <section key={section.id} className="row align-items-center mt-4">
+            <div
+              key={section.id}
+              className="row align-items-center justify-content-center justify-content-md-start mt-3"
+            >
               <FadeInSection direction="bottom" delay={sectionIndex * 0.6}>
-                <h5 className="section-title text-start mb-3 mb-md-0 col-md-2 col-xl-1">
-                  {section.title}
-                </h5>
+                <div
+                  className={`${styles.skillsTitleBox} text-center mb-4 mb-md-0 col-12 col-md-2 col-xl-1`}
+                >
+                  <h3 className={styles.skillsTitle}>{section.title}</h3>
+                </div>
               </FadeInSection>
 
-              <div className="row row-gap-4 col-md-10 col-xl-11">
+              <div className="row row-gap-4 col-12 col-md-10 col-xl-11">
                 {section.skills.map((skill) => {
                   const index = skillIndex++;
 
@@ -39,7 +46,7 @@ const Skills = () => {
                   );
                 })}
               </div>
-            </section>
+            </div>
           ))}
           {/* <button className="btn-show-more mt-3"
                                 type="button"

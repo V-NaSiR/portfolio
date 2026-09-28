@@ -1,10 +1,6 @@
-.curlyBrace {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    max-height: 10px;
-    width: 10px;
+.skillsTitle {
+    font-size: 1rem;
+    color: var(--board-border);
 }
 
 .iconBox {
@@ -224,5 +220,21 @@
 
     100% {
         background-position: 40px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .skillsTitleBox {
+        border-bottom: 2px solid var(--board-border);
+    }
+
+    .skillsTitle {
+        padding: 0 .5rem;
+        position: relative;
+        top: .5rem;
+        background-color: var(--main-bg);
+        width: max-content;
+        margin: 0 auto;
+        border-radius: 2rem;
     }
 }
