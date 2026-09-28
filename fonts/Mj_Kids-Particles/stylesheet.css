@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Mj_Kids Particles';
+    src: url('Mj_KidsParticles.eot');
+    src: url('Mj_KidsParticles.eot?#iefix') format('embedded-opentype'),
+        url('Mj_KidsParticles.woff2') format('woff2'),
+        url('Mj_KidsParticles.woff') format('woff'),
+        url('Mj_KidsParticles.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
