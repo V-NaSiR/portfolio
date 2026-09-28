@@ -182,7 +182,7 @@
 @media (max-width:1050px) {
     .header {
         width: 94%;
-        padding: 46px 25px;
+        padding: 2.5rem .75rem;
     }
 }
 
